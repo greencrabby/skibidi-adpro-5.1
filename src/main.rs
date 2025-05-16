@@ -15,7 +15,7 @@ impl MessageHandler<UserCreatedEventMessage> for UserCreatedHandler {
         // thread::sleep(ten_millis);
 
         println!(
-            "In Valentino Vieri Zhuo's (2306206446) Computer [129500004y]. Message received: {:?}",
+            "In Joshua Elisha Shalom's (2306275001) Computer [129500004y]. Message received: {:?}",
             message
         );
         Ok(())
