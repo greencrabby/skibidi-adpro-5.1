@@ -1,0 +1,7 @@
+# skibidi-adpro-5.1
+
+## What is amqp?
+AMQP (Advanced Message Queuing Protocol) is a standard messaging protocol used to enable reliable, asynchronous communication between different components of a system. It allows one component (the producer) to send messages to a broker, which then stores the messages in queues until another component (the consumer) retrieves them. This decouples the sender and receiver, making the system more flexible and fault-tolerant. AMQP supports various messaging patterns such as point-to-point and publish-subscribe, making it suitable for distributed systems and microservices architectures. RabbitMQ is a commonly used message broker that implements the AMQP protocol.
+
+## What does it mean? guest:guest@localhost:5672 , what is the first guest, and what is the second guest, and what is localhost:5672 is for?
+The string guest:guest@localhost:5672 is a common way to represent a connection to an AMQP broker like RabbitMQ, and it follows thes general format `username:password@host:port`. First guest is the username used to log in to the RabbitMQ broker. Second guest is the password for the user (in this case, the same as the username). localhost is the host where the RabbitMQ server is running. localhost means it’s running on the same machine as the client connecting to it. 5672 is the port number that RabbitMQ uses for AMQP connections (by default, it's 5672 for non-TLS connections). So, `guest:guest@localhost:5672` means: Connect to RabbitMQ on the local machine at port 5672 using the username "guest" and password "guest".
