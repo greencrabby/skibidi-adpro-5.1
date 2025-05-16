@@ -9,3 +9,6 @@ The string guest:guest@localhost:5672 is a common way to represent a connection 
 ## Screenshot
 - The smaller number of queues on my machine specifically, a total of 16 indicates that the system is handling message flow more efficiently, or that fewer queues are being created by the application. In contrast, a higher queue count on other machines can occur when the publisher sends messages at a faster rate than the subscriber can process them. When the subscriber is slower, unprocessed messages begin to accumulate, and depending on how the system or code is set up, additional queues may be created to handle the overflow or categorize messages. In my case, the subscriber is keeping up more closely with the publisher, which reduces message buildup and keeps the number of queues low.
 ![alt text](assets/SS1.png)
+
+- It can be observed that the spike in message rate has decreased over time. This is because each subscriber receives a distinct set of messages when the publisher sends a large volume of data to the queue. Since each subscriber functions as an independent application, the workload of retrieving and processing messages is distributed among them. Once a message is consumed by a subscriber, it is removed from the queue and is no longer available to other subscribers, ensuring that each message is processed only once.
+![alt text](assets/SS2.png)
